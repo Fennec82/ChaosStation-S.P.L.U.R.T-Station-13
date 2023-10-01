@@ -466,6 +466,22 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<HR>"
 
 			dat += "<center>"
+			var/client_file = user.client.Import()
+			var/savefile_name
+			if(client_file)
+				var/savefile/cache_savefile = new(user.client.Import())
+				if(!cache_savefile["deleted"] || savefile_needs_update(cache_savefile) != -2)
+					cache_savefile["real_name"] >> savefile_name
+			dat += "Local storage: [savefile_name ? savefile_name : "Empty"]"
+			dat += "<br />"
+			dat += "<a href='?_src_=prefs;preference=export_slot'>Export current slot</a>"
+			dat += "<a [savefile_name ? "href='?_src_=prefs;preference=import_slot' style='white-space:normal;'" : "class='linkOff'"]>Import into current slot</a>"
+			dat += "<a href='?_src_=prefs;preference=delete_local_copy' style='white-space:normal;background:#eb2e2e;'>Delete locally saved character</a>"
+			dat += "</center>"
+
+			dat += "<HR>"
+
+			dat += "<center>"
 			dat += "<a href='?_src_=prefs;preference=character_tab;tab=[GENERAL_CHAR_TAB]' [character_settings_tab == GENERAL_CHAR_TAB ? "class='linkOn'" : ""]>General</a>"
 			dat += "<a href='?_src_=prefs;preference=character_tab;tab=[APPEARANCE_CHAR_TAB]' [character_settings_tab == APPEARANCE_CHAR_TAB ? "class='linkOn'" : ""]>Appearance</a>"
 			dat += "<a href='?_src_=prefs;preference=character_tab;tab=[MARKINGS_CHAR_TAB]' [character_settings_tab == MARKINGS_CHAR_TAB ? "class='linkOn'" : ""]>Markings</a>"
@@ -1521,8 +1537,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					dat += "<b>Chastity Interactions :</b> <a href='?_src_=prefs;preference=chastitypref'>[(cit_toggles & CHASTITY) ? "Allowed" : "Disallowed"]</a><br>"
 					dat += "<b>Genital Stimulation Modifiers :</b> <a href='?_src_=prefs;preference=stimulationpref'>[(cit_toggles & STIMULATION) ? "Allowed" : "Disallowed"]</a><br>"
 					dat += "<b>Edging :</b> <a href='?_src_=prefs;preference=edgingpref'>[(cit_toggles & EDGING) ? "Allowed" : "Disallowed"]</a><br>"
+					dat += "<b>Receive Cum Covering :</b> <a href='?_src_=prefs;preference=cumontopref'>[(cit_toggles & CUM_ONTO) ? "Allowed" : "Disallowed"]</a><br>"
 					dat += "<span style='border-radius: 2px;border:1px dotted white;cursor:help;' title='Enables verbs involving farts, shit and piss.'>?</span> "
 					dat += "<b>Unholy ERP verbs :</b> <a href='?_src_=prefs;preference=unholypref'>[unholypref]</a><br>" //https://www.youtube.com/watch?v=OHKARc-GObU
+					dat += "<span style='border-radius: 2px;border:1px dotted white;cursor:help;' title='Enables macro / micro stepping and stomping interactions.'>?</span> "
+					dat += "<b>Stomping Interactions :</b> <a href='?_src_=prefs;preference=stomppref'>[stomppref ? "Yes" : "No"]</a><br>"
 					//END OF SPLURT EDIT
 					//SKYRAT EDIT
 					dat += "<span style='border-radius: 2px;border:1px dotted white;cursor:help;' title='Enables verbs involving ear/brain fucking.'>?</span> " //SPLURT Edit (wow! editception???)
@@ -3511,6 +3530,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 							unholypref = "No"
 						if("No")
 							unholypref = "Yes"
+				if("stomppref") // What the fuck is this?
+					stomppref = !stomppref
 				//Skyrat edit - *someone* offered me actual money for this shit
 				if("extremepref") //i hate myself for doing this
 					switch(extremepref) //why the fuck did this need to use cycling instead of input from a list
@@ -3912,7 +3933,33 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					cit_toggles ^= STIMULATION
 				if("edgingpref")
 					cit_toggles ^= EDGING
+				if("cumontopref")
+					cit_toggles ^= CUM_ONTO
 				//
+				if("export_slot")
+					var/savefile/S = save_character(export = TRUE)
+					if(istype(S, /savefile))
+						user.client.Export(S)
+						tgui_alert_async(user, "Successfully saved character slot")
+					else
+						tgui_alert_async(user, "Failed saving character slot")
+						return
+
+				if("import_slot")
+					var/savefile/S = new(user.client.Import())
+					if(istype(S, /savefile))
+						if(load_character(provided = S) == TRUE)
+							tgui_alert_async(user, "Successfully loaded character slot.")
+						else
+							tgui_alert_async(user, "Failed loading character slot")
+							return
+					else
+						tgui_alert_async(user, "Failed loading character slot")
+						return
+
+				if("delete_local_copy")
+					user.client.clear_export()
+					tgui_alert_async(user, "Local save data erased.")
 
 	if(href_list["preference"] == "gear")
 		if(href_list["clear_loadout"])

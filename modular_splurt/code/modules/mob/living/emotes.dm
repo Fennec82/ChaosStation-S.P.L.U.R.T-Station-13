@@ -314,7 +314,7 @@
 			sound = pick('modular_splurt/sound/voice/moan_f1.ogg', 'modular_splurt/sound/voice/moan_f2.ogg', 'modular_splurt/sound/voice/moan_f3.ogg', 'modular_splurt/sound/voice/moan_f4.ogg', 'modular_splurt/sound/voice/moan_f5.ogg', 'modular_splurt/sound/voice/moan_f6.ogg', 'modular_splurt/sound/voice/moan_f7.ogg')
 		if(isalien(user))
 			sound = 'sound/voice/hiss6.ogg'
-		playsound(user.loc, sound, 50, 1, 4, 1.2)
+		playlewdinteractionsound(user.loc, sound, 50, 1, 4, 1.2)
 		message = "moans!"
 	else if(miming)
 		message = "acts out a moan."
@@ -956,6 +956,15 @@
 	emote_sound = 'modular_splurt/sound/voice/rizz.ogg'
 	emote_cooldown = 1.43 SECONDS
 
+/datum/emote/living/audio/buff
+	key = "buff"
+	key_third_person = "buffs"
+	message = "shows off their muscles."
+	message_param = "shows off their muscles to %t."
+	emote_sound = 'modular_splurt/sound/voice/buff.ogg'
+	emote_cooldown = 4.77 SECONDS
+	emote_pitch_variance = FALSE
+
 /datum/emote/living/audio/merowr
 	key = "merowr"
 	key_third_person = "merowrs"
@@ -1028,3 +1037,40 @@
 	message_mime = "acts like a mooing cow."
 	emote_sound = 'modular_splurt/sound/voice/moo.ogg'
 	emote_cooldown = 1.7 SECONDS
+
+/datum/emote/living/audio/untitledgoose
+	key = "goosehonk"
+	key_third_person = "honks"
+	message = "honks!"
+	message_mime = "looks like a duck from hell!"
+	emote_sound = 'modular_splurt/sound/voice/goosehonk/sfx_goose_honk_b_01.ogg'
+	emote_cooldown = 0.8 SECONDS
+
+/datum/emote/living/audio/untitledgoose/run_emote(mob/user, params)
+	emote_sound = pick('modular_splurt/sound/voice/goosehonk/sfx_goose_honk_b_01.ogg', 'modular_splurt/sound/voice/goosehonk/sfx_goose_honk_b_02.ogg','modular_splurt/sound/voice/goosehonk/sfx_goose_honk_b_03.ogg','modular_splurt/sound/voice/goosehonk/sfx_goose_honk_b_06.ogg')
+	. = ..()
+
+/datum/emote/living/audio/untitledgooseB
+	key = "goosehonkb"
+	key_third_person = "honks differently"
+	message = "honks differently!"
+	message_mime = "looks like a duck from hell!"
+	emote_sound = 'modular_splurt/sound/voice/goosehonk/sfx_goose_honk_b_01.ogg'
+	emote_cooldown = 0.8 SECONDS
+
+/datum/emote/living/audio/untitledgooseB/run_emote(mob/user, params)
+	emote_sound = pick('modular_splurt/sound/voice/goosehonk/sfx_gooseB_honk_02.ogg', 'modular_splurt/sound/voice/goosehonk/sfx_gooseB_honk_03.ogg', 'modular_splurt/sound/voice/goosehonk/sfx_gooseB_honk_04.ogg', 'modular_splurt/sound/voice/goosehonk/sfx_gooseB_honk_06.ogg', 'modular_splurt/sound/voice/goosehonk/sfx_gooseB_honk_07.ogg', 'modular_splurt/sound/voice/goosehonk/sfx_gooseB_honk_08.ogg', 'modular_splurt/sound/voice/goosehonk/sfx_gooseB_honk_09.ogg')
+	. = ..()
+
+/datum/emote/living/audio/scream2
+	key = "scream2"
+	key_third_person = "screams2"
+	message = "screams!"
+	message_mime = "acts out a rather silly scream!"
+	emote_sound = 'modular_splurt/sound/voice/cscream1.ogg'
+	emote_cooldown = 3.3 SECONDS // Uses longest sound's time.
+	emote_pitch_variance = FALSE
+
+/datum/emote/living/audio/scream2/run_emote(mob/user, params)
+	emote_sound = pick('modular_splurt/sound/voice/cscream1.ogg', 'modular_splurt/sound/voice/cscream2.ogg', 'modular_splurt/sound/voice/cscream3.ogg', 'modular_splurt/sound/voice/cscream4.ogg', 'modular_splurt/sound/voice/cscream5.ogg', 'modular_splurt/sound/voice/cscream6.ogg', 'modular_splurt/sound/voice/cscream7.ogg', 'modular_splurt/sound/voice/cscream8.ogg', 'modular_splurt/sound/voice/cscream9.ogg', 'modular_splurt/sound/voice/cscream10.ogg', 'modular_splurt/sound/voice/cscream11.ogg')
+	. = ..()
