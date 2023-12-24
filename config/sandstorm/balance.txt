@@ -45,7 +45,7 @@ CRYPTO_POWER_USE_PROCESS 20
 
 ## How long should the autodoc take to perform surgery?
 ## This is modified by stock part ratings
-AUTODOC_TIME_SURGERY_BASE 350
+AUTODOC_TIME_SURGERY_BASE 50
 
 ###
 ## BLUESPACE MINER

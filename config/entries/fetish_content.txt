@@ -25,7 +25,7 @@ BUTT_MAX_SIZE_PREFS 8
 
 ## Body size configs, the feature will be disabled if both min and max have the same value.
 BODY_SIZE_MIN 0.1
-BODY_SIZE_MAX 2.00
+BODY_SIZE_MAX 9.00
 
 ## Allowed visibility toggles
 

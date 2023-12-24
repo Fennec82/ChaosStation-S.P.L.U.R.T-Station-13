@@ -1,4 +1,4 @@
-/datum/sprite_accessory/snouts/gator
+/datum/sprite_accessory/snouts/mam_snouts/gator //hopefuly this works
 	name = "Gator"
 	icon = 'modular_splurt/icons/mob/mutant_bodyparts.dmi'
 	icon_state = "gator"
@@ -242,6 +242,12 @@
 /datum/sprite_accessory/snouts/mam_snouts/sloog/lips
 	name = "Sloog (lips)"
 	icon_state = "slooglips"
+	matrixed_sections = MATRIX_RED_GREEN
+
+/datum/sprite_accessory/snouts/mam_snouts/rodent_thick
+	name = "Rodent (Thick)"
+	icon = 'modular_splurt/icons/mob/mam_snouts.dmi'
+	icon_state = "rodentthick"
 	matrixed_sections = MATRIX_RED_GREEN
 
 /datum/sprite_accessory/snouts/mam_snouts/tajaran
