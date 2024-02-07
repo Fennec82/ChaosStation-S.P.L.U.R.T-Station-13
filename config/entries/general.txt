@@ -102,7 +102,7 @@ MAX_TICKETS_PER_ROLL 100
 
 ## RANDOM EVENTS ###
 ## Comment this out to disable random events during the round.
-ALLOW_RANDOM_EVENTS
+#ALLOW_RANDOM_EVENTS
 
 ## Multiplier for earliest start time of dangerous events.
 ## Set to 0 to make dangerous events avaliable from round start.
@@ -139,14 +139,14 @@ ALLOW_AI_MULTICAM
 ## AWAY MISSIONS ###
 
 ## Uncomment to load one of the missions from awaymissionconfig.txt at roundstart.
-#ROUNDSTART_AWAY
+ROUNDSTART_AWAY
 
 ## Uncomment to load one of the virtual reality levels from vr_config at roundstart.
-#ROUNDSTART_VR
+ROUNDSTART_VR
 
 ## How long the delay is before the Away Mission gate opens. Default is half an hour.
 ## 600 is one minute.
-GATEWAY_DELAY 18000
+GATEWAY_DELAY 3000
 
 
 ## ACCESS ###
@@ -163,13 +163,13 @@ MINIMAL_ACCESS_THRESHOLD 20
 #JOBS_HAVE_MINIMAL_ACCESS
 
 ## Uncomment to give assistants maint access.
-#ASSISTANTS_HAVE_MAINT_ACCESS
+ASSISTANTS_HAVE_MAINT_ACCESS
 
 ## Uncoment to give security maint access. Note that if you dectivate JOBS_HAVE_MINIMAL_ACCESS security already gets maint from that.
-#SECURITY_HAS_MAINT_ACCESS
+SECURITY_HAS_MAINT_ACCESS
 
 ## Uncomment to give everyone maint access.
-#EVERYONE_HAS_MAINT_ACCESS
+EVERYONE_HAS_MAINT_ACCESS
 
 ## Comment this out this to make security officers spawn in departmental security posts
 SEC_START_BRIG
@@ -177,7 +177,7 @@ SEC_START_BRIG
 
 ## GHOST INTERACTION ###
 ## Uncomment to let ghosts spin chairs. You may be wondering why this is a config option. Don't ask.
-#GHOST_INTERACTION
+GHOST_INTERACTION
 
 ## NON-VOCAL SILICONS ###
 ## Uncomment these to stop the AI, or cyborgs, from having vocal communication.
@@ -197,7 +197,7 @@ SEC_START_BRIG
 ## Set to 1 for "custom", silicons will start with the custom laws defined in silicon_laws.txt. (If silicon_laws.txt is empty, the AI will spawn with asimov and Custom boards will auto-delete.)
 ## Set to 2 for "random", silicons will start with a random lawset picked from random laws specified below.
 ## Set to 3 for "weighted random", using values in "silicon_weights.txt", a law will be selected, with weights specifed in that file.
-DEFAULT_LAWS 0
+DEFAULT_LAWS 3
 
 ## RANDOM LAWS ##
 ## ------------------------------------------------------------------------------------------
@@ -244,20 +244,20 @@ RANDOM_LAWS vore_pred
 LAW_WEIGHT custom,0
 
 ## standard-ish laws. These are fairly ok to run
-LAW_WEIGHT asimov,32
-LAW_WEIGHT asimovpp,12
-LAW_WEIGHT paladin,12
-LAW_WEIGHT robocop,12
-LAW_WEIGHT corporate,12
+LAW_WEIGHT asimov,0
+LAW_WEIGHT asimovpp,0
+LAW_WEIGHT paladin,0
+LAW_WEIGHT robocop,0
+LAW_WEIGHT corporate,0
 
 ## Quirky laws. Shouldn't cause too much harm
-LAW_WEIGHT hippocratic,3
-LAW_WEIGHT maintain,4
-LAW_WEIGHT drone,3
-LAW_WEIGHT liveandletlive,3
-LAW_WEIGHT peacekeeper,3
-LAW_WEIGHT reporter,4
-LAW_WEIGHT hulkamania,4
+LAW_WEIGHT hippocratic,0
+LAW_WEIGHT maintain,0
+LAW_WEIGHT drone,0
+LAW_WEIGHT liveandletlive,0
+LAW_WEIGHT peacekeeper,0
+LAW_WEIGHT reporter,0
+LAW_WEIGHT hulkamania,0
 
 ## Bad idea laws. Probably shouldn't enable these
 LAW_WEIGHT syndie,0
@@ -271,7 +271,7 @@ LAW_WEIGHT buildawall,0
 LAW_WEIGHT slut,0
 LAW_WEIGHT shebang,0
 LAW_WEIGHT milker,0
-LAW_WEIGHT vore_pred,0
+LAW_WEIGHT vore_pred,9
 
 ##------------------------------------------------
 
@@ -346,7 +346,7 @@ ROUNDSTART_RACES podweak
 ##-------------------------------------------------------------------------------------------
 
 ## Uncomment to give players the choice of joining as a human with mutant bodyparts before they join the game
-#JOIN_WITH_MUTANT_HUMANS
+JOIN_WITH_MUTANT_HUMANS
 
 ##Overflow job. Default is assistant
 OVERFLOW_JOB Assistant
@@ -359,7 +359,7 @@ OVERFLOW_CAP -1
 #STARLIGHT
 
 ## Uncomment to bring back old grey suit assistants instead of the now default rainbow colored assistants.
-#GREY_ASSISTANTS
+GREY_ASSISTANTS
 
 ## Midround Antag (aka Mulligan antag) config options ###
 
@@ -373,13 +373,13 @@ MIDROUND_ANTAG_LIFE_CHECK 0.7
 ## during which the player shouldn't be able to come back into the round through
 ## midround playable roles or mob spawners.
 ## Set to 0 to completely disable it.
-SUICIDE_REENTER_ROUND_TIMER 30
+SUICIDE_REENTER_ROUND_TIMER 0
 
 ## A world time threshold, in minutes, under which the player receives
 ## an extra timeout, purposely similar to the above one (and also stacks with),
 ## equal to the difference between the current world.time and this threshold.
 ## Both configs are indipendent from each other, disabling one won't affect the other.
-ROUNDSTART_SUICIDE_TIME_LIMIT 30
+ROUNDSTART_SUICIDE_TIME_LIMIT 0
 
 ##Limit Spell Choices##
 ## Uncomment to disallow wizards from using certain spells that may be too chaotic/fun for your playerbase
@@ -440,14 +440,14 @@ MICE_ROUNDSTART 10
 #EMERGENCY_SHUTTLE_AUTOCALL_THRESHOLD 0.2
 
 ## Determines if players are allowed to print integrated circuits, uncomment to allow.
-#IC_PRINTING
+IC_PRINTING
 
 ## Uncomment to allow roundstart quirk selection in the character setup menu.
 ## This used to be named traits, hence the config name, but it handles quirks, not the other kind of trait!
 ROUNDSTART_TRAITS
 
 ## Uncomment to disable human moods.
-#DISABLE_HUMAN_MOOD
+DISABLE_HUMAN_MOOD
 
 ## Enable night shifts ##
 #ENABLE_NIGHT_SHIFTS
@@ -483,26 +483,30 @@ ECONOMY
 #DYNAMIC_VOTING
 
 ## Uncomment to enable dynamic ruleset config file.
-DYNAMIC_CONFIG_ENABLED
+#DYNAMIC_CONFIG_ENABLED
 
 ## Choose which Engine to start the round with. Weight is after the comma. Setting the weight to 0 removes the engine from rotation.
+<<<<<<< Updated upstream
 BOX_RANDOM_ENGINE Box SM,3
 BOX_RANDOM_ENGINE Box Tesla,3
 BOX_RANDOM_ENGINE Box Singulo,2
+=======
+BOX_RANDOM_ENGINE Box SM,10
+BOX_RANDOM_ENGINE Box Tesla,0
+BOX_RANDOM_ENGINE Box Singulo,0
 BOX_RANDOM_ENGINE Box SM 1x3,0
 BOX_RANDOM_ENGINE Box SM 5x5,0
 BOX_RANDOM_ENGINE Box SM 3x,0
 BOX_RANDOM_ENGINE Box TEG,2
 BOX_RANDOM_ENGINE Box Empty,0
-BOX_RANDOM_ENGINE Box Antimatter,0
+BOX_RANDOM_ENGINE Box Antimatter,12
 BOX_RANDOM_ENGINE Box P.A.C.M.A.N,0
-BOX_RANDOM_ENGINE Box RBMK,0
-BOX_RANDOM_ENGINE Box DIY,2
-BOX_RANDOM_ENGINE Box DIY_SM,1
+BOX_RANDOM_ENGINE Box RBMK,15
+
 
 
 ## Whether the suicide verb is allowed.
-# SUICIDE_ALLOWED
+SUICIDE_ALLOWED
 
 ## Allows players to set a hexadecimal color of their choice as skin tone, on top of the standard ones.
 ALLOW_CUSTOM_SKINTONES

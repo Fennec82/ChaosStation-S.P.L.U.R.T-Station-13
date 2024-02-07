@@ -13,7 +13,7 @@ WEIGHTED_STATION_TRAITS
 # Base amount of max save slots
 # Amount of character slots that players will have without modifiers being applied
 # default is 24
-#BASE_SAVE_SLOTS 24
+BASE_SAVE_SLOTS 80
 
 # SM delamination
 # Comment to make the SM not explode
