@@ -3942,6 +3942,7 @@
 #include "interface\fonts\tiny_unicode.dm"
 #include "interface\fonts\vcr_osd_mono.dm"
 #include "modular_chaosstation\code\game\objects\items\ranyapsykerstaff.dm"
+#include "modular_chaosstation\code\modules\mob\dead\new_player\sprite_accessories\tails.dm"
 #include "modular_citadel\code\datums\components\souldeath.dm"
 #include "modular_citadel\code\datums\status_effects\chems.dm"
 #include "modular_citadel\code\game\objects\effects\temporary_visuals\souldeath.dm"
