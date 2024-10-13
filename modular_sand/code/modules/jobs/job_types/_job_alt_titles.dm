@@ -205,3 +205,12 @@
 	alt_titles = list(
 		"Explorer"
 		)
+
+//Silicon
+
+/datum/job/ai
+	alt_titles = list(
+		"AI",
+		"Automated Overseer",
+		"Station Intelligence"
+		)

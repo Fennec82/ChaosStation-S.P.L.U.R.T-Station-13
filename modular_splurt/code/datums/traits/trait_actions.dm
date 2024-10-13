@@ -1610,7 +1610,7 @@
 
 /datum/action/ropebunny/conversion
 	name = "Convert Bondage"
-	desc = "Convert five cloth into bondage rope, or convert bondage ropes into bondage bolas."
+	desc = "Convert five cloth into bondage rope"
 	icon_icon = 'modular_splurt/icons/obj/clothing/masks.dmi'
 	button_icon_state = "ballgag"
 
@@ -1629,13 +1629,13 @@
 			new /obj/item/restraints/bondage_rope(H.loc)
 			to_chat(H, span_warning("You successfully create a set of bondage ropes."))
 			return
-	if(istype(I,/obj/item/restraints/bondage_rope))
+/*	if(istype(I,/obj/item/restraints/bondage_rope)) //Chaosstation Balance change
 		new /obj/item/shibola(H.loc)
 		to_chat(H, span_warning("You successfully create a shibari bola."))
 		qdel(I)
-		return
+		return */
 	else
-		to_chat(H, span_warning("You must either be holding cloth or a bondage rope to use this ability!"))
+		to_chat(H, span_warning("You must either be holding cloth to use this ability!"))
 
 /mob/living/proc/alterlimbs()
 	set name = "Alter Limbs"

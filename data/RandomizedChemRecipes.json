@@ -1,0 +1,1 @@
+{"/datum/reagent/consumable/secretsauce":{"timestamp":229,"required_reagents":{"/datum/reagent/gold":9,"/datum/reagent/toxin/coniine":6},"required_catalysts":[],"required_temp":216,"is_cold_recipe":0,"results":{"/datum/reagent/consumable/secretsauce":1},"required_container":"/obj/item/reagent_containers/glass/bucket"}}
