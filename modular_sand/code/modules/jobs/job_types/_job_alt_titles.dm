@@ -153,7 +153,7 @@
 		"Surgeon",
 		"Medical Secretary",
 		"Emergency Physician",
-		"Field Surgeon" 
+		"Field Surgeon"
 		)
 
 /datum/job/geneticist

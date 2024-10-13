@@ -10,3 +10,4 @@
 	name = "Trencher Gas Mask"
 	path = /obj/item/clothing/mask/gas/goner/basic
 	cost = 2
+
