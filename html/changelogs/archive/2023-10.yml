@@ -28,6 +28,7 @@
   - bugfix: Fixes the bug of assistants not receiving backpack donator items
   yip:
   - rscadd: yip
+<<<<<<< Updated upstream
 2023-10-12:
   Kuki-kono:
   - bugfix: Gladiator no longer stays invincible
@@ -62,3 +63,5 @@
   RachelDoe:
   - bugfix: Kinkmate contraband item "Breast reduction pills" now contains stated
       item, instead of penis reduction pills
+=======
+>>>>>>> Stashed changes

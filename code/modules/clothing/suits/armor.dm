@@ -128,6 +128,16 @@
 	body_parts_covered = CHEST|ARMS
 	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
 
+/obj/item/clothing/suit/armor/vest/warden/armadyne //SR port
+	name = "warden's armored jacket"
+	desc = "A blue jacket with silver rank pips and body armor strapped on top. Often worn by private security contracted on some stations."
+	icon_state = "vest_warden"
+
+/obj/item/clothing/suit/armor/vest/warden/syndicate
+	name = "master at arms' vest"
+	desc = "Stunning. Menacing. Perfect for the man who gets bullied for leaving the brig."
+	icon_state = "warden_syndie"
+
 /obj/item/clothing/suit/armor/vest/leather
 	name = "security overcoat"
 	desc = "Lightly armored leather overcoat meant as casual wear for high-ranking officers. Bears the crest of Nanotrasen Security."
