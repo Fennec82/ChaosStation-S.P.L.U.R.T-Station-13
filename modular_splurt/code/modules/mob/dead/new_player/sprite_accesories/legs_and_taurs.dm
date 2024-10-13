@@ -16,7 +16,6 @@
 	name = "Shadekin Long Tail"
 	icon_state = "shadekinlong"
 	icon = 'modular_splurt/icons/mob/mam_taur.dmi'
-	taur_mode = STYLE_PAW_TAURIC
 	color_src = MUTCOLORS
 	extra = FALSE
 

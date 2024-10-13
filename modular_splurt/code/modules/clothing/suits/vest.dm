@@ -58,6 +58,7 @@
 	item_state = "peacekeeper_black"
 	icon = 'modular_splurt/icons/obj/clothing/suits.dmi'
 	mob_overlay_icon = 'modular_splurt/icons/mob/clothing/suit.dmi'
+	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
 	dog_fashion = null
 
 /obj/item/clothing/suit/armor/vest/metrocop
@@ -76,6 +77,7 @@
 	item_state = "peacekeeper_trench_warden"
 	icon = 'modular_splurt/icons/obj/clothing/suits.dmi'
 	mob_overlay_icon = 'modular_splurt/icons/mob/clothing/suit.dmi'
+	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
 
 /obj/item/clothing/suit/armor/hos/peacekeeper
 	name = "head of security's peacekeeper armored trench coat"
@@ -84,6 +86,7 @@
 	item_state = "peacekeeper_trench_hos"
 	icon = 'modular_splurt/icons/obj/clothing/suits.dmi'
 	mob_overlay_icon = 'modular_splurt/icons/mob/clothing/suit.dmi'
+	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
 
 /obj/item/clothing/suit/sling
 	name = "rifle sling"

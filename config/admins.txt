@@ -8,4 +8,6 @@
 # NOTE: syntax was changed to allow hyphenation of ranknames, since spaces are stripped.      #
 ###############################################################################################
 
-yourckeygoeshere = Host
+RiotScopez = Host
+
+Pyromaniac1490124 = Game Admin

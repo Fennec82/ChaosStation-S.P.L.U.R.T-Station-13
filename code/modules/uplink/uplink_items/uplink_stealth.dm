@@ -169,3 +169,9 @@
 	desc = "A traditional clusterbang grenade with a payload consisting entirely of Syndicate soap. Useful in any scenario!"
 	item = /obj/item/grenade/clusterbuster/soap
 	cost = 6
+
+/datum/uplink_item/stealthy_weapons/shibari_bola //Chaosstation balance change
+	name = "Shibari Bola"
+	desc = "A set of skillfully entwined bondage ropes, capable of being thrown at unsuspecting targets. Clothing items may be hidden inside of it, forcing the clothing to be worn on a successful hit. Additionally, bondage ropes may be added to bind the target on hit."
+	item = /obj/item/shibola
+	cost = 6

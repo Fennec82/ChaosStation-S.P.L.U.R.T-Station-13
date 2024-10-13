@@ -153,7 +153,7 @@
 		"Surgeon",
 		"Medical Secretary",
 		"Emergency Physician",
-		"Field Surgeon" 
+		"Field Surgeon"
 		)
 
 /datum/job/geneticist
@@ -204,4 +204,13 @@
 /datum/job/mining
 	alt_titles = list(
 		"Explorer"
+		)
+
+//Silicon
+
+/datum/job/ai
+	alt_titles = list(
+		"AI",
+		"Automated Overseer",
+		"Station Intelligence"
 		)

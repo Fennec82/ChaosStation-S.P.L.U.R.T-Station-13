@@ -1,4 +1,4 @@
-/datum/sprite_accessory/snouts/gator
+/datum/sprite_accessory/snouts/mam_snouts/gator //hopefuly this works
 	name = "Gator"
 	icon = 'modular_splurt/icons/mob/mutant_bodyparts.dmi'
 	icon_state = "gator"

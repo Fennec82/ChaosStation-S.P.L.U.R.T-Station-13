@@ -50,8 +50,10 @@
 /obj/item/clothing/head/beret/sec/peacekeeper/warden
 	name = "warden's peacekeeper beret"
 	desc = "A robust beret with a red variant of the security insignia emblazoned on it. This one is issued to wardens."
-	icon_state = "policeberetred"
-	item_state = "policeberetred"
+	icon_state = "peacekeeper_beret_warden"
+	item_state = "peacekeeper_beret_warden"
+	icon = 'modular_skyrat/hats.dmi'
+	mob_overlay_icon = 'modular_skyrat/head.dmi'
 
 /obj/item/clothing/head/beret/sec/peacekeeper/hos
 	name = "head of security's peacekeeper beret"
