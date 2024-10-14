@@ -3,8 +3,6 @@
 #Ignore everything in datafolder and subdirectories
 /tmp/**/*
 
-#Ignore byond config folder.
-/cfg/**/*
 
 # Ignore compiled linux libs in the root folder, e.g. librust_g.so
 /*.so
