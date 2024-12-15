@@ -1,5 +1,5 @@
 ## S.P.L.U.R.T. Station 13
-Based and maintained from Sandstorm Station 13, which is based and maintained from Citadel, which is based and mantained from /tg/station. (yup)
+Based and maintained from Sandstorm Station 13, which is based and maintained from Citadel, which is based and mantained from /tg/station.
 
 ### Notice of Modification
 
